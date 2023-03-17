@@ -23,17 +23,17 @@ for i in range(0, times):
   number_2 = randrange(10)
 
 # Realizo las cuentas dependiendo el operador que haya tocado.
-  if operator == "+": 
-    resultado = number_1 + number_2
-  elif operator == "-":
-    resultado = number_1 - number_2
-  elif operator == "/":
-    while number_2 == 0:
-      number_2 = randrange(10)
-    resultado = number_1 / number_2
-  elif operator == "*":
-    resultado = number_1 * number_2
-
+  match operator:
+    case "+":
+         resultado = number_1 + number_2
+    case "-":
+        resultado = number_1 - number_2
+    case "/":
+        while number_2 == 0:
+            number_2 = randrange(10)
+        resultado = number_1 / number_2
+    case "*":
+        resultado = number_1 * number_2
 # Se imprime la cuenta.
   print(f"{i+1}- ¿Cuánto es {number_1} {operator} {number_2}?")
 
